@@ -1,0 +1,33 @@
+name: SaveInventory
+author: PretzelJohn
+main: com.pretzel.dev.saveinventory.SaveInventory
+version: 1.2.3
+api-version: 1.13
+
+commands:
+  saveinventory:
+    description: Allows server staff to save and load player inventories.
+    usage: /<command>
+    permission: saveinventory.use
+    aliases: si
+permissions:
+  saveinventory.*:
+    description: Gives access to all commands.
+    children:
+      saveinventory.use: true
+      saveinventory.restore: true
+      saveinventory.backup: true
+      saveinventory.reload: true
+    default: op
+  saveinventory.use:
+    description: Allows SaveInventory commands to work.
+    default: true
+  saveinventory.restore:
+    description: Allows rollbacks for an online player.
+    default: op
+  saveinventory.backup:
+    description: Allows backups for an online player.
+    default: op
+  saveinventory.reload:
+    description: Allows player to reload config.yml.
+    default: op

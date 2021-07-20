@@ -1,0 +1,46 @@
+##################################################################################
+#                             SI ~ SaveInventory                                 #
+#                               Version: 1.2.3                                   #
+#                               By: PretzelJohn                                  #
+##################################################################################
+
+# This helps me keep track of what server versions are being used. Please leave this set to true
+bStats: true
+
+# Maximum number of inventory backups per player. The oldest backups are deleted first.
+SavesPerPlayer: 10
+
+# Automatically makes a backup of each player's inventory and enderchest when they log in
+BackupOnJoin: false
+
+# Automatically makes a backup of each player's inventory and enderchest when they die
+BackupOnDeath: false
+
+# Set this to true and set up your MySQL database (below) for all Bungee servers
+# to automatically sync the following player data across multiple servers:
+#  * Inventory
+#  * Enderchest
+#  * Health & Food levels
+#  * XP level
+# NOTE: Make sure to change this setting on ALL Bungee servers to prevent data issues
+BungeeAutoSync: false
+
+# Set up your MySQL database, then fill in the following information:
+database:
+  # Set to true to enable MySQL database, or false (default) to use SQLite
+  MySQL: false
+  # this is your MySQL database server host name
+  host: localhost
+  # this is the port of your MySQL database (usually 3306)
+  port: 3306
+  # this is the name of your database/schema (you must create the database/schema first)
+  name: saveinventory
+  # username and password to log in to the database
+  username: root
+  password: root
+  # this is the character encoding you set for your database/schema
+  encoding: utf8
+  # setting useSSL to true can add extra security if your server supports it
+  useSSL: false
+
+
